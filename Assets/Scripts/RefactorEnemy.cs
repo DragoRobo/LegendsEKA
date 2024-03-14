@@ -18,8 +18,6 @@ public class RefactorEnemy : MonoBehaviour
     public int currentPatrolPoint = 0;
 
     public bool slipping = false;
-   
-    public float facing;
     
     public Rigidbody rb;
 
@@ -54,42 +52,6 @@ public class RefactorEnemy : MonoBehaviour
     }
     private void Update()
     {
-        /*// changes the enemy's behavior: pacing in circles or chasing the player
-        if (enemyStats.idle == true)
-        {
-            //Patrol Logic
-                Vector3 moveToPoint = patrolPoints[currentPatrolPoint].position;
-                transform.position = Vector3.MoveTowards(transform.position, moveToPoint, enemyStats.walkSpeed * Time.deltaTime);
-
-                if (Vector3.Distance(transform.position, moveToPoint) < 0.01f)
-                {
-                    currentPatrolPoint++;
-                    if (currentPatrolPoint > patrolPoints.Length - 1)
-                    {
-                        currentPatrolPoint = 0;
-                    }
-                }
-        }
-        else if (enemyStats.idle == false)
-        {
-            //Chase the player
-             sight.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-             transform.LookAt(sight);
-             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * enemyStats.chaseSpeed);
-           
-            //Explode if we get within the enemyStats.explodeDist
-            if (Vector3.Distance(transform.position, player.transform.position) < enemyStats.explodeDist)
-            {
-                StartCoroutine("Explode");
-                enemyStats.idle = true;
-            }
-        }
-
-        // stops enemy from following player up the inaccessible slopes
-        if (slipping == true)
-        {
-            transform.Translate(Vector3.back * 20 * Time.deltaTime, Space.World);
-        }*/
         Patrol();
     }
 

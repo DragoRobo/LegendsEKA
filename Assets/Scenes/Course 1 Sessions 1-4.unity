@@ -10410,7 +10410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238474744}
-  m_LocalRotation: {x: -0.0020354863, y: 0.0035245481, z: 0.000007174228, w: 0.9999917}
+  m_LocalRotation: {x: -0.002035489, y: 0.0035245519, z: 0.000007174245, w: 0.9999917}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15522,7 +15522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680226749}
-  m_LocalRotation: {x: -0.0020354863, y: 0.0035245481, z: 0.000007174228, w: 0.9999917}
+  m_LocalRotation: {x: -0.0020354863, y: 0.0035245519, z: 0.000007174235, w: 0.9999917}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -31362,7 +31362,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0020355163, y: -0.0035245481, z: -0.0000071743334, w: -0.9999917}
+  m_LocalRotation: {x: 0.0020355163, y: -0.0035245519, z: -0.000007174341, w: -0.9999917}
   m_LocalPosition: {x: -0.10573528, y: 2.5, z: -14.999627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -47742,7 +47742,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285456457}
-  m_LocalRotation: {x: 0.04981339, y: 0.00352016, z: -0.00017557017, w: 0.99875236}
+  m_LocalRotation: {x: 0.04981339, y: 0.0035201514, z: -0.00017556973, w: 0.99875236}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -50934,6 +50934,7 @@ GameObject:
   - component: {fileID: 1336565510}
   - component: {fileID: 1336565509}
   - component: {fileID: 1336565508}
+  - component: {fileID: 1336565514}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Trap
@@ -50985,7 +50986,6 @@ MonoBehaviour:
     type: 3}
   currentPatrolPoint: 0
   slipping: 0
-  facing: 0
   rb: {fileID: 0}
 --- !u!135 &1336565509
 SphereCollider:
@@ -51076,6 +51076,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1336565514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336565506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb29fc66ae2a2f5408c74d7eca07e052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats:
+    walkSpeed: 0
+    rotateSpeed: 0
+    chaseSpeed: 0
+    idle: 0
+    explodeDist: 0
+  slipping: 0
+  enemyExplosionParticles: {fileID: 4912132913345027125, guid: fdab0a93f34bcb34e95520ef61abf60c,
+    type: 3}
 --- !u!1001 &1338182570
 PrefabInstance:
   m_ObjectHideFlags: 0
